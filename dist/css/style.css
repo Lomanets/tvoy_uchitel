@@ -7,10 +7,11 @@
     --black: #444444;
     --white: #FFFFFF;
     --gray: #E8E8E8;
-    --header: 24px;
-    --textLarge: 18px;
     --text: 14px;
+    --textLarge: 18px;
+    --header: 24px;
     --headerBold: 40px;
+    --headerIntro: 50px;
 }
 
 
@@ -32,10 +33,6 @@ a:hover {
     opacity: .7;
 }
 
-a:active {
-    transform: scale(1.2);
-}
-
 li {
     list-style: none;
 }
@@ -45,8 +42,15 @@ li {
     margin: 0 auto;
 }
 
+h1, h2, h3, h4, h5, h6, p, ul, ol, li {
+    margin: 0;
+    padding: 0;
+    letter-spacing: 0.05em;
+}
+
 .header {
     padding-top: 38px;
+    padding-bottom: 27px;
 }
 
 .header-container {
@@ -60,9 +64,14 @@ li {
 }
 
 .header-navigation {
+    margin-left: 32px;
     display: flex;
     align-items: center;
-    margin-left: 32px;
+}
+
+.header-navigation__list {
+    display: flex;
+    align-items: center;
 }
 
 .header-navigation__item {
@@ -74,3 +83,75 @@ li {
     color: var(--black);
 }
 
+.container-intro {
+    height: 579px;
+    background: linear-gradient(105.59deg, #84F585 52.09%, #C7FFC7 115.52%);
+    border-radius: 15px;
+}
+
+.intro-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.intro-left {
+    padding-top: 106px;
+    padding-left: 64px;
+    
+}
+
+.intro h1 {
+    font-size: var(--headerIntro);
+    font-weight: 600;
+    line-height: 105%;
+}
+
+.intro-direction {
+    margin-top: 37px;
+}
+
+.intro-direction p {
+    font-size: var(--headerIntro);
+    font-weight: 600;
+    line-height: 130.5%;
+}
+
+.game::before {
+    content: "🎮 ";
+    font-size: 40px;
+}
+
+.site::before {
+    content: "​👨‍💻 ​";
+    font-size: 40px;
+}
+
+.algorithms::before {
+    content: "🤖 ";
+    font-size: 40px;
+}
+
+.intro-lesson {
+    margin-top: 42px;
+    display: flex;
+    align-items: center;
+}
+
+.intro-lesson a {
+    font-size: 32px;
+    color: var(--black);
+    margin-right: 16px;
+}
+
+.intro-tagline {
+    margin-top: 29px;
+    font-size: var(--textLarge);
+}
+
+.intro-wrapper-right {
+    background: url('../image/roblox.png') no-repeat;
+    width: 440px;
+    height: 441px;
+    padding-right: 95px;
+    margin-top: 75px;
+}
